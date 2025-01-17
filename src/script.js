@@ -8,8 +8,20 @@ function search(event) {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
 
+let currentTime = new Date();
+
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+
 let currentDate = document.querySelector("#current-date");
-Let currentTime = new Date ();
+
 let minutes = currentTime.getMinutes();
 let hours = currentTime.getHours();
 let day = currentTime.getDay();
@@ -21,16 +33,6 @@ if (minutes < 10) {
 if (hours < 10) {
   hours = `0${hours}`;
 }
-
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
 
 let formattedDay = days[day];
 
