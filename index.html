@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla Weather App</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="src/styles.css" />
     
 
     <link
@@ -43,22 +43,27 @@
   <body class="background"> 
    <div class="weather-container">
       <header>
-            <form>
+            <form id="search-form">
               <input type="search" placeholder="Enter a city" required class="search-input"/>
-              <input type="submit" value="search" class="search-button" />
+              <input type="submit" value="search" class="search-button" 
+              id="search-input"/>
             </form>
+
             <p class="last-updated"><em>Last updated on : Date & time</em></p>
       </header>
 
       <main>
             <div class="current-weather">
               <div>
-                <h1 class="current-city">Paris</h1>
+                <h1 class="current-city" id="current-city">Paris</h1>
                 <h2 class="current-country">France</h2>
-                <p class="weather-info">
-                  Saturday 15:32, moderate rain <br />
+                <div class="weather-info">
+                  <span id="current-date"></span> 
+                  <br /> 
+                  <p>moderate rain ~ 
                   Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
-                </p>
+                  </p>
+              </div>
               </div>
               <div class="current-temp">
               <span class="current-temp-icon">☀️</span><span class="current-temp-value">14</span><span class="current-temp-unit">°C</span>
